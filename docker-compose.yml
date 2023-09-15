@@ -10,6 +10,15 @@ services:
     volumes: -./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
 
   php:
+    build:
+      context: ./dockerfiles
+      dockerfile: php.dockerfile
+
+    # Bind mount for source code
+    # Delegated is a slower synch time from src here to container; performance optimization due to reducing frequent writes to container
+    volumes:
+      - ./src:/var/www/html:delegated
+
   mysql:
   composer:
   artisan:
