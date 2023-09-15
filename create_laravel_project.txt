@@ -4,3 +4,5 @@ docker-compose run --rm composer create-project --prefer-dist laravel/laravel:^8
 # Run the db migration service to populate the db
 docker-compose run --rm artisan migrate
 
+docker-compose up -d --build server
+docker-compose down
