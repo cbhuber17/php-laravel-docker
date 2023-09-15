@@ -1,0 +1,2 @@
+"create-project --prefer-dist laravel/laravel" is documentation from the laravel website to create a new php project
+docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
