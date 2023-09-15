@@ -1,2 +1,6 @@
 "create-project --prefer-dist laravel/laravel:^8.0" is documentation from the laravel website to create a new php project
 docker-compose run --rm composer create-project --prefer-dist laravel/laravel:^8.0 .
+
+# Run the db migration service to populate the db
+docker-compose run --rm artisan migrate
+
